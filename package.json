@@ -3,7 +3,15 @@
   "version": "0.0.15",
   "description": "Master Clock / Base Clock",
   "url": "https://github.com/uupaa/Clock.js",
-  "keywords": ["timer", "clock", "vsync", "requestAnimationFrame", "WebModule", "uupaa", "Unstable"],
+  "keywords": [
+    "timer",
+    "clock",
+    "vsync",
+    "requestAnimationFrame",
+    "WebModule",
+    "uupaa",
+    "Unstable"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/uupaa/Clock.js.git"
@@ -14,7 +22,7 @@
     "build": "node ../WebModule/run/minify.js --verbose --strict --keep --release",
     "watch": "node ../WebModule/run/watch.js --verbose --run hint",
     "page": "node ../WebModule/run/page.js --verbose",
-    "test": "npm run min; npm run node; npm run browser",
+    "test": "npm run node; npm run browser",
     "node": "NODE_ENV=production NODE_PATH=lib node --harmony test/node.js",
     "noded": "NODE_ENV=production NODE_PATH=lib node --debug-brk --harmony test/node.js",
     "browser": "open http://localhost:8000/Clock.js/test/index.html",
@@ -29,28 +37,39 @@
   },
   "webmodule": {
     "develop": false,
-    "label": ["@dev"],
+    "label": [
+      "@dev"
+    ],
     "browser": {
-      "source": ["lib/Clock.js"],
+      "source": [
+        "lib/Clock.js"
+      ],
       "output": "release/Clock.b.min.js"
     },
     "worker": {
-      "source": ["lib/Clock.js"],
+      "source": [
+        "lib/Clock.js"
+      ],
       "output": "release/Clock.w.min.js"
     },
     "node": {
-      "source": ["lib/Clock.js"],
+      "source": [
+        "lib/Clock.js"
+      ],
       "output": "release/Clock.n.min.js"
     },
     "nw": {
-      "source": ["lib/Clock.js"],
+      "source": [
+        "lib/Clock.js"
+      ],
       "output": "release/Clock.nw.min.js"
     }
   },
   "dependencies": {},
   "devDependencies": {
-    "uupaa.task.js": "",
-    "uupaa.easing.js": ""
+    "typescript": "^1.5.0-beta",
+    "uupaa.easing.js": "",
+    "uupaa.task.js": ""
   },
   "lib": "./lib/",
   "main": "./index.js",
